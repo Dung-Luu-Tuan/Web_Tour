@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/tour_proj?characterEncoding=UTF-8
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            master
+        </property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">100</property>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <!-- Show all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- List mapping annotation classes -->
+        <mapping class="models.Tour" />
+        <mapping class="models.TypeTour" />
+        <mapping class="models.TourPrice" />
+        <mapping class="models.PlaceOrder" />
+        <mapping class="models.Place" />
+        <mapping class="models.TouristGroup" />
+        <mapping class="models.CustomerTour" />
+        <mapping class="models.Customer" />
+        <mapping class="models.DetailTourGroup" />
+        <mapping class="models.Cost" />
+        <mapping class="models.Staff" />
+        <mapping class="models.StaffAllocation" />
+        <mapping class="models.TypeCost" />
+
+    </session-factory>
+</hibernate-configuration>
